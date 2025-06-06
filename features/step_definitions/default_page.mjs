@@ -51,6 +51,25 @@ const elements = {
     ],
     element_name: "Password textbox",
   },
+  textbox_username_2: {
+    locators: [
+      { css: 'internal:label="Username"i', priority: 1 },
+      { css: 'internal:label="Username"s', priority: 1 },
+      { css: 'internal:role=textbox[name="Username"i]', priority: 1 },
+      { css: 'internal:role=textbox[name="Username"s]', priority: 1 },
+    ],
+    element_name: "Username textbox",
+  },
+  button_log_in_1: {
+    locators: [
+      { css: 'internal:role=button[name="Log In"i]', priority: 1 },
+      { css: 'internal:role=button[name="Log In"s]', priority: 1 },
+      { css: 'internal:text="Log In"s', priority: 1 },
+      { css: 'input >> internal:has-text="Log In"i', priority: 1 },
+      { css: "input >> internal:has-text=/^Log In$/", priority: 1 },
+    ],
+    element_name: "Log In button",
+  },
 };
 
 let context = null;
@@ -111,4 +130,25 @@ Given(
   "The user navigates to the Salesforce login page and clicks on the Username and Password textboxes",
   { timeout: 120000 },
   the_user_navigates_to_the_salesforce_login_page_and_clicks_on_the_username_and_password_textboxes
+);
+
+/**
+ * The user navigates to the Salesforce login page and clicks on the Username textbox and Log In button
+ * @recorder
+ * @path=/
+ */
+async function the_user_navigates_to_the_salesforce_login_page_and_clicks_on_the_username_textbox_and_log_in_button() {
+  // source: recorder
+  // implemented_at: 2025-06-06T05:30:57.291Z
+  const _params = {};
+  // Click on Username textbox
+  await context.web.click(elements["textbox_username_2"], _params, null, this);
+  // Click on Log In button
+  await context.web.click(elements["button_log_in_1"], _params, null, this);
+}
+
+Given(
+  "The user navigates to the Salesforce login page and clicks on the Username textbox and Log In button",
+  { timeout: 120000 },
+  the_user_navigates_to_the_salesforce_login_page_and_clicks_on_the_username_textbox_and_log_in_button
 );

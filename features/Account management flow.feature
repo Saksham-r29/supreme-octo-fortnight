@@ -20,3 +20,8 @@ Scenario Outline: Account creation and verification
 Scenario: Login with username and password
 	# click on Username, click on Password
 	Given The user navigates to the Salesforce login page and clicks on the Username and Password textboxes
+
+	
+Scenario: Login to salesforce
+	# click on Username, click on Log In
+	Given The user navigates to the Salesforce login page and clicks on the Username textbox and Log In button
