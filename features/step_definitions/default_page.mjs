@@ -51,6 +51,15 @@ const elements = {
     ],
     element_name: "Password textbox",
   },
+  textbox_password_2: {
+    locators: [
+      { css: 'internal:label="Password"i', priority: 1 },
+      { css: 'internal:label="Password"s', priority: 1 },
+      { css: 'internal:role=textbox[name="Password"i]', priority: 1 },
+      { css: 'internal:role=textbox[name="Password"s]', priority: 1 },
+    ],
+    element_name: "Password textbox",
+  },
 };
 
 let context = null;
@@ -111,4 +120,23 @@ Given(
   "The user navigates to the Salesforce login page and clicks on the Username and Password textboxes",
   { timeout: 120000 },
   the_user_navigates_to_the_salesforce_login_page_and_clicks_on_the_username_and_password_textboxes
+);
+
+/**
+ * The user clicks on the Password textbox on the Login page
+ * @recorder
+ * @path=/
+ */
+async function the_user_clicks_on_the_password_textbox_on_the_login_page() {
+  // source: recorder
+  // implemented_at: 2025-06-06T05:32:07.484Z
+  const _params = {};
+  // Click on Password textbox
+  await context.web.click(elements["textbox_password_2"], _params, null, this);
+}
+
+Given(
+  "The user clicks on the Password textbox on the Login page",
+  { timeout: 60000 },
+  the_user_clicks_on_the_password_textbox_on_the_login_page
 );
