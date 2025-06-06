@@ -1,0 +1,47 @@
+{
+  "button_new": {
+    "basic": [
+      {
+        "score": 141,
+        "css": "internal:role=button[name=\"New\"i]",
+        "priority": 1
+      },
+      {
+        "score": 146,
+        "css": "internal:role=button[name=\"New\"s]",
+        "priority": 1
+      },
+      {
+        "score": 190,
+        "css": "internal:text=\"New\"i >> xpath=..",
+        "priority": 1
+      },
+      {
+        "score": 195,
+        "css": "internal:text=\"New\"s >> xpath=..",
+        "priority": 1
+      },
+      {
+        "score": 355,
+        "css": "a >> internal:has-text=\"New\"i",
+        "priority": 1
+      },
+      {
+        "score": 390,
+        "css": "a >> internal:has-text=/^New$/",
+        "priority": 1
+      }
+    ],
+    "no_text": [
+      {
+        "css": "[href][title='New']"
+      },
+      {
+        "css": "a.forceActionLink[title=\"New\"][role=\"button\"]"
+      }
+    ],
+    "ignore_digit": [],
+    "context": [],
+    "strategy": "basic"
+  }
+}

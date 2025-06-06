@@ -1,0 +1,9 @@
+{
+  "*": [
+    {
+      "key": "u",
+      "value": "U2FsdGVkX1/C0Rlv5BokZ2o5h4s1zTekMGAYcjSFHckFjxT+j+qAWmS5auvHUHlnFcXQ0kJxNIwAteDUQ2yQZg==",
+      "DataType": "totp"
+    }
+  ]
+}
