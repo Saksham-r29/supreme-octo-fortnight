@@ -15,3 +15,8 @@ Scenario Outline: Account creation and verification
 		Examples:
 		| username_email | user_password | verification_code | account_name | phone_number |
 		| dev@blinq.io   | Rohan@12345   | {{u}}             | saksham      | 12345        |
+
+	
+Scenario: Login with username and password
+	# click on Username, click on Password
+	Given The user navigates to the Salesforce login page and clicks on the Username and Password textboxes
