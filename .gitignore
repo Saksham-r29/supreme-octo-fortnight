@@ -1,8 +1,9 @@
 node_modules
-package.json
-package-lock.json
 reports
 logs
 runs
 .DS_Store
 .memory.json
+*.env
+__temp_features*/
+/*.zip
