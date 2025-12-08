@@ -27,10 +27,14 @@ When("generate crypto id", { timeout: 120000 }, generate_crypto_id);
 /* generate a random uuid
 */
 async function generate_a_random_uuid() {
-//source: user
-//implemented_at: 2025-12-08T10:24:17.705Z
-//TODO: Implement the step
-
+  //source: user
+  //implemented_at: 2025-12-08T10:24:17.705Z
+  // Generate a random UUID (v4)
+  const uuid = ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+    (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+  );
+  // Store the uuid in test data for later use
+  await context.web.setTestData({ random_uuid: uuid }, this);
 }
-
 Given("generate a random uuid", { timeout: 120000 }, generate_a_random_uuid);
+
