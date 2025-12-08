@@ -16,7 +16,9 @@ async function generate_crypto_id() {
   if (typeof setTestData === "function") {
     setTestData({ crypto_id: id }, this);
   }
+  // Also print the generated crypto id
+  console.log(id);
 }
-
 When("generate crypto id", { timeout: 120000 }, generate_crypto_id);
+
 
