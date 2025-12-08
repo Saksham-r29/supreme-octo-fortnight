@@ -1,0 +1,48 @@
+{
+  "searchbox_where": {
+    "custom": [],
+    "context": [],
+    "basic": [
+      {
+        "css": "internal:role=searchbox[name=\"Where\"i]",
+        "score": 102,
+        "priority": 1
+      },
+      {
+        "css": "internal:role=searchbox[name=\"Where\"s]",
+        "score": 107,
+        "priority": 1
+      }
+    ],
+    "text_with_index": [],
+    "ignore_digit": [],
+    "no_text": [
+      {
+        "score": 2,
+        "css": "[data-testid=\"structured-search-input-field-query\"]",
+        "priority": 1
+      },
+      {
+        "score": 500,
+        "css": "#bigsearch-query-location-input",
+        "priority": 1
+      },
+      {
+        "score": 530,
+        "css": "input",
+        "priority": 1
+      },
+      {
+        "score": 128,
+        "css": "internal:attr=[placeholder=\"Search destinations\"s]",
+        "priority": 1
+      },
+      {
+        "score": 123,
+        "css": "internal:attr=[placeholder=\"Search destinations\"i]",
+        "priority": 1
+      }
+    ],
+    "strategy": "basic"
+  }
+}

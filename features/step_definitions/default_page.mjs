@@ -2,73 +2,11 @@ import { Given, When, Then, After, setDefaultTimeout, Before } from "@dev-blinq/
 import { closeContext, initContext, navigate, TestContext as context } from "automation_model";
 
 const elements = {
-  heading_inspiration_for_future_getaways: {
-    locators: [
-      { css: 'internal:text="Inspiration for future getaways"s', priority: 1 },
-      { css: 'internal:text="Inspiration for future getaways"i', priority: 1 },
-      { css: 'internal:text="Inspiration for future"i', priority: 1 },
-      { css: 'h2 >> internal:has-text="Inspiration for future getaways"i', priority: 1 },
-      { css: 'h2 >> internal:has-text="Inspiration for future"i', priority: 1 },
-    ],
-    element_name: "Inspiration for future getaways heading",
-    element_key: "heading_inspiration_for_future_getaways",
-  },
-  text_inspiration_for_future_getawayspopu: {
-    locators: [
-      { css: 'internal:text="Inspiration for future"i >> xpath=../..', priority: 1 },
-      { css: 'internal:text="Inspiration for future getawaysPopularArts &"i >> xpath=..', priority: 1 },
-      {
-        css: 'internal:text="Inspiration for future"i >> xpath=../../.. >> div >> internal:has-text="Inspiration for future"i',
-        priority: 2,
-        index: 0,
-      },
-      {
-        css: 'internal:text="Inspiration for future"i >> xpath=../../.. >> div >> internal:has-text="Inspiration for future getawaysPopularArts &"i',
-        priority: 2,
-        index: 0,
-      },
-      {
-        css: 'internal:text="Inspiration for future getawaysPopularArts &"i >> xpath=../.. >> div >> internal:has-text="Inspiration for future"i',
-        priority: 2,
-        index: 0,
-      },
-    ],
-    element_name:
-      "Inspiration for future getawaysPopularArts & cultureBeachMountainsOutdoorsThings to doTravel tips & inspirationAirbnb-friendly apartmentsDallas Vacation rentalsCleveland Condo rentalsBarcelona Condo rentalsGalveston House rentalsKauaʻi County Villa rentalsWhistler House rentalsRaleigh House rentalsAmsterdam Monthly RentalsPhiladelphia House rentalsGulf Shores Villa rentalsPortland Villa rentalsMinneapolis Monthly RentalsTokyo Monthly RentalsWest Palm Beach Villa rentalsSt. Petersburg Vacation rentalsCharlotte Vacation rentalsLondon Monthly RentalsShow morePlaya del Carmen Monthly RentalsSan Juan Apartment rentalsRichmond City Monthly RentalsSan Diego Monthly RentalsMount Pocono Villa rentalsBrooklyn Condo rentalsOahu Condo rentalsSavannah Villa rentalsManhattan Monthly RentalsKansas City Vacation rentalsBroken Bow Vacation rentalsKyoto Monthly RentalsCharleston Apartment rentalsSan Antonio Monthly RentalsSanto Domingo De Guzmán Vacation rentalsWilmington Condo rentalsKey West Villa rentalsDetroit Vacation rentalsAlbuquerque Monthly RentalsPittsburgh Monthly RentalsAthens Cottage rentalsMilan Monthly RentalsMadrid Villa rentalsMemphis House rentalsDubai Monthly RentalsWashington Condo rentalsNashville Condo rentalsHonolulu Monthly RentalsCincinnati Vacation rentalsOsaka Monthly RentalsSarasota House rentalsBranson Vacation rentalsChicago Condo rentalsDestin House rentalsMedellín Vacation rentalsDublin Monthly RentalsSacramento Condo rentalsJersey City Apartment rentalsFlorida Keys Condo rentalsClearwater Apartment rentalsTampa House rentalsCorpus Christi Apartment rentalsBig Bear Lake Monthly RentalsFort Lauderdale Condo rentalsLas Vegas Condo rentalsCartagena Cabin rentalsSanta Barbara Apartment rentalsSt. Augustine Cottage rentalsSalt Lake City Cottage rentalsSedona Cabin rentalsSt. Louis Apartment rentalsMyrtle Beach Monthly RentalsIstanbul Vacation rentalsAnaheim Apartment rentalsColumbus Vacation rentalsFort Worth Vacation rentalsMexico City Monthly RentalsPorto House rentalsPuerto Vallarta Villa rentalsMiami Beach Cottage rentalsNew Orleans Apartment rentalsNew York Apartment rentalsVenice Apartment rentalsOklahoma City Vacation rentalsAtlanta Villa rentalsChattanooga Cottage rentalsRome Apartment rentalsCancún Cottage rentalsBoston Monthly RentalsSydney Villa rentalsKissimmee Vacation rentalsLos Angeles Monthly RentalsSouth Lake Tahoe Cabin rentalsOrlando Vacation rentalsIndianapolis Apartment rentalsKailua-Kona Cabin rentalsHouston Monthly RentalsBangkok Villa rentalsLouisville Apartment rentalsKnoxville Condo rentalsMiami Apartment rentalsBreckenridge Monthly RentalsShow moreShow moreShow moreShow moreShow moreShow moreShow more Text",
-    element_key: "text_inspiration_for_future_getawayspopu",
-  },
-  heading_inspiration_for_future_getaways_1: {
-    locators: [
-      { css: 'internal:text="Inspiration for future getaways"s', priority: 1 },
-      { css: 'internal:text="Inspiration for future getaways"i', priority: 1 },
-      { css: 'internal:text="Inspiration for future"i', priority: 1 },
-      { css: 'h2 >> internal:has-text="Inspiration for future getaways"i', priority: 1 },
-      { css: 'h2 >> internal:has-text="Inspiration for future"i', priority: 1 },
-    ],
-    element_name: "Inspiration for future getaways heading",
-    element_key: "heading_inspiration_for_future_getaways_1",
-  },
-  list_dallas_vacation_rentalscleveland_co: {
-    locators: [
-      {
-        css: 'internal:text="Dallas Vacation rentalsCleveland Condo rentalsBarcelona Condo rentalsGalveston"i',
-        priority: 1,
-      },
-      { css: 'internal:text="Dallas Vacation"i >> xpath=../..', priority: 1 },
-      {
-        css: 'ul >> internal:has-text="Dallas Vacation rentalsCleveland Condo rentalsBarcelona Condo rentalsGalveston"i',
-        priority: 1,
-      },
-      { css: 'ul >> internal:has-text="Dallas Vacation"i', priority: 1 },
-      {
-        css: 'internal:role=list >> internal:has-text="Dallas Vacation rentalsCleveland Condo rentalsBarcelona Condo rentalsGalveston"i',
-        priority: 1,
-      },
-    ],
-    element_name:
-      "Dallas Vacation rentalsCleveland Condo rentalsBarcelona Condo rentalsGalveston House rentalsKauaʻi County Villa rentalsWhistler House rentalsRaleigh House rentalsAmsterdam Monthly RentalsPhiladelphia House rentalsGulf Shores Villa rentalsPortland Villa rentalsMinneapolis Monthly RentalsTokyo Monthly RentalsWest Palm Beach Villa rentalsSt. Petersburg Vacation rentalsCharlotte Vacation rentalsLondon Monthly RentalsShow morePlaya del Carmen Monthly RentalsSan Juan Apartment rentalsRichmond City Monthly RentalsSan Diego Monthly RentalsMount Pocono Villa rentalsBrooklyn Condo rentalsOahu Condo rentalsSavannah Villa rentalsManhattan Monthly RentalsKansas City Vacation rentalsBroken Bow Vacation rentalsKyoto Monthly RentalsCharleston Apartment rentalsSan Antonio Monthly RentalsSanto Domingo De Guzmán Vacation rentalsWilmington Condo rentalsKey West Villa rentalsDetroit Vacation rentalsAlbuquerque Monthly RentalsPittsburgh Monthly RentalsAthens Cottage rentalsMilan Monthly RentalsMadrid Villa rentalsMemphis House rentalsDubai Monthly RentalsWashington Condo rentalsNashville Condo rentalsHonolulu Monthly RentalsCincinnati Vacation rentalsOsaka Monthly RentalsSarasota House rentalsBranson Vacation rentalsChicago Condo rentalsDestin House rentalsMedellín Vacation rentalsDublin Monthly RentalsSacramento Condo rentalsJersey City Apartment rentalsFlorida Keys Condo rentalsClearwater Apartment rentalsTampa House rentalsCorpus Christi Apartment rentalsBig Bear Lake Monthly RentalsFort Lauderdale Condo rentalsLas Vegas Condo rentalsCartagena Cabin rentalsSanta Barbara Apartment rentalsSt. Augustine Cottage rentalsSalt Lake City Cottage rentalsSedona Cabin rentalsSt. Louis Apartment rentalsMyrtle Beach Monthly RentalsIstanbul Vacation rentalsAnaheim Apartment rentalsColumbus Vacation rentalsFort Worth Vacation rentalsMexico City Monthly RentalsPorto House rentalsPuerto Vallarta Villa rentalsMiami Beach Cottage rentalsNew Orleans Apartment rentalsNew York Apartment rentalsVenice Apartment rentalsOklahoma City Vacation rentalsAtlanta Villa rentalsChattanooga Cottage rentalsRome Apartment rentalsCancún Cottage rentalsBoston Monthly RentalsSydney Villa rentalsKissimmee Vacation rentalsLos Angeles Monthly RentalsSouth Lake Tahoe Cabin rentalsOrlando Vacation rentalsIndianapolis Apartment rentalsKailua-Kona Cabin rentalsHouston Monthly RentalsBangkok Villa rentalsLouisville Apartment rentalsKnoxville Condo rentalsMiami Apartment rentalsBreckenridge Monthly Rentals list",
-    element_key: "list_dallas_vacation_rentalscleveland_co",
-  },
+  heading_inspiration_for_future_getaways:{"locators":[{"css":"internal:text=\"Inspiration for future getaways\"s","priority":1},{"css":"internal:text=\"Inspiration for future getaways\"i","priority":1},{"css":"internal:text=\"Inspiration for future\"i","priority":1},{"css":"h2 >> internal:has-text=\"Inspiration for future getaways\"i","priority":1},{"css":"h2 >> internal:has-text=\"Inspiration for future\"i","priority":1}],"element_name":"Inspiration for future getaways heading","element_key":"heading_inspiration_for_future_getaways"},
+  text_inspiration_for_future_getawayspopu:{"locators":[{"css":"internal:text=\"Inspiration for future\"i >> xpath=../..","priority":1},{"css":"internal:text=\"Inspiration for future getawaysPopularArts &\"i >> xpath=..","priority":1},{"css":"internal:text=\"Inspiration for future\"i >> xpath=../../.. >> div >> internal:has-text=\"Inspiration for future\"i","priority":2,"index":0},{"css":"internal:text=\"Inspiration for future\"i >> xpath=../../.. >> div >> internal:has-text=\"Inspiration for future getawaysPopularArts &\"i","priority":2,"index":0},{"css":"internal:text=\"Inspiration for future getawaysPopularArts &\"i >> xpath=../.. >> div >> internal:has-text=\"Inspiration for future\"i","priority":2,"index":0}],"element_name":"Inspiration for future getawaysPopularArts & cultureBeachMountainsOutdoorsThings to doTravel tips & inspirationAirbnb-friendly apartmentsDallas Vacation rentalsCleveland Condo rentalsBarcelona Condo rentalsGalveston House rentalsKauaʻi County Villa rentalsWhistler House rentalsRaleigh House rentalsAmsterdam Monthly RentalsPhiladelphia House rentalsGulf Shores Villa rentalsPortland Villa rentalsMinneapolis Monthly RentalsTokyo Monthly RentalsWest Palm Beach Villa rentalsSt. Petersburg Vacation rentalsCharlotte Vacation rentalsLondon Monthly RentalsShow morePlaya del Carmen Monthly RentalsSan Juan Apartment rentalsRichmond City Monthly RentalsSan Diego Monthly RentalsMount Pocono Villa rentalsBrooklyn Condo rentalsOahu Condo rentalsSavannah Villa rentalsManhattan Monthly RentalsKansas City Vacation rentalsBroken Bow Vacation rentalsKyoto Monthly RentalsCharleston Apartment rentalsSan Antonio Monthly RentalsSanto Domingo De Guzmán Vacation rentalsWilmington Condo rentalsKey West Villa rentalsDetroit Vacation rentalsAlbuquerque Monthly RentalsPittsburgh Monthly RentalsAthens Cottage rentalsMilan Monthly RentalsMadrid Villa rentalsMemphis House rentalsDubai Monthly RentalsWashington Condo rentalsNashville Condo rentalsHonolulu Monthly RentalsCincinnati Vacation rentalsOsaka Monthly RentalsSarasota House rentalsBranson Vacation rentalsChicago Condo rentalsDestin House rentalsMedellín Vacation rentalsDublin Monthly RentalsSacramento Condo rentalsJersey City Apartment rentalsFlorida Keys Condo rentalsClearwater Apartment rentalsTampa House rentalsCorpus Christi Apartment rentalsBig Bear Lake Monthly RentalsFort Lauderdale Condo rentalsLas Vegas Condo rentalsCartagena Cabin rentalsSanta Barbara Apartment rentalsSt. Augustine Cottage rentalsSalt Lake City Cottage rentalsSedona Cabin rentalsSt. Louis Apartment rentalsMyrtle Beach Monthly RentalsIstanbul Vacation rentalsAnaheim Apartment rentalsColumbus Vacation rentalsFort Worth Vacation rentalsMexico City Monthly RentalsPorto House rentalsPuerto Vallarta Villa rentalsMiami Beach Cottage rentalsNew Orleans Apartment rentalsNew York Apartment rentalsVenice Apartment rentalsOklahoma City Vacation rentalsAtlanta Villa rentalsChattanooga Cottage rentalsRome Apartment rentalsCancún Cottage rentalsBoston Monthly RentalsSydney Villa rentalsKissimmee Vacation rentalsLos Angeles Monthly RentalsSouth Lake Tahoe Cabin rentalsOrlando Vacation rentalsIndianapolis Apartment rentalsKailua-Kona Cabin rentalsHouston Monthly RentalsBangkok Villa rentalsLouisville Apartment rentalsKnoxville Condo rentalsMiami Apartment rentalsBreckenridge Monthly RentalsShow moreShow moreShow moreShow moreShow moreShow moreShow more Text","element_key":"text_inspiration_for_future_getawayspopu"},
+  heading_inspiration_for_future_getaways_1:{"locators":[{"css":"internal:text=\"Inspiration for future getaways\"s","priority":1},{"css":"internal:text=\"Inspiration for future getaways\"i","priority":1},{"css":"internal:text=\"Inspiration for future\"i","priority":1},{"css":"h2 >> internal:has-text=\"Inspiration for future getaways\"i","priority":1},{"css":"h2 >> internal:has-text=\"Inspiration for future\"i","priority":1}],"element_name":"Inspiration for future getaways heading","element_key":"heading_inspiration_for_future_getaways_1"},
+  list_dallas_vacation_rentalscleveland_co:{"locators":[{"css":"internal:text=\"Dallas Vacation rentalsCleveland Condo rentalsBarcelona Condo rentalsGalveston\"i","priority":1},{"css":"internal:text=\"Dallas Vacation\"i >> xpath=../..","priority":1},{"css":"ul >> internal:has-text=\"Dallas Vacation rentalsCleveland Condo rentalsBarcelona Condo rentalsGalveston\"i","priority":1},{"css":"ul >> internal:has-text=\"Dallas Vacation\"i","priority":1},{"css":"internal:role=list >> internal:has-text=\"Dallas Vacation rentalsCleveland Condo rentalsBarcelona Condo rentalsGalveston\"i","priority":1}],"element_name":"Dallas Vacation rentalsCleveland Condo rentalsBarcelona Condo rentalsGalveston House rentalsKauaʻi County Villa rentalsWhistler House rentalsRaleigh House rentalsAmsterdam Monthly RentalsPhiladelphia House rentalsGulf Shores Villa rentalsPortland Villa rentalsMinneapolis Monthly RentalsTokyo Monthly RentalsWest Palm Beach Villa rentalsSt. Petersburg Vacation rentalsCharlotte Vacation rentalsLondon Monthly RentalsShow morePlaya del Carmen Monthly RentalsSan Juan Apartment rentalsRichmond City Monthly RentalsSan Diego Monthly RentalsMount Pocono Villa rentalsBrooklyn Condo rentalsOahu Condo rentalsSavannah Villa rentalsManhattan Monthly RentalsKansas City Vacation rentalsBroken Bow Vacation rentalsKyoto Monthly RentalsCharleston Apartment rentalsSan Antonio Monthly RentalsSanto Domingo De Guzmán Vacation rentalsWilmington Condo rentalsKey West Villa rentalsDetroit Vacation rentalsAlbuquerque Monthly RentalsPittsburgh Monthly RentalsAthens Cottage rentalsMilan Monthly RentalsMadrid Villa rentalsMemphis House rentalsDubai Monthly RentalsWashington Condo rentalsNashville Condo rentalsHonolulu Monthly RentalsCincinnati Vacation rentalsOsaka Monthly RentalsSarasota House rentalsBranson Vacation rentalsChicago Condo rentalsDestin House rentalsMedellín Vacation rentalsDublin Monthly RentalsSacramento Condo rentalsJersey City Apartment rentalsFlorida Keys Condo rentalsClearwater Apartment rentalsTampa House rentalsCorpus Christi Apartment rentalsBig Bear Lake Monthly RentalsFort Lauderdale Condo rentalsLas Vegas Condo rentalsCartagena Cabin rentalsSanta Barbara Apartment rentalsSt. Augustine Cottage rentalsSalt Lake City Cottage rentalsSedona Cabin rentalsSt. Louis Apartment rentalsMyrtle Beach Monthly RentalsIstanbul Vacation rentalsAnaheim Apartment rentalsColumbus Vacation rentalsFort Worth Vacation rentalsMexico City Monthly RentalsPorto House rentalsPuerto Vallarta Villa rentalsMiami Beach Cottage rentalsNew Orleans Apartment rentalsNew York Apartment rentalsVenice Apartment rentalsOklahoma City Vacation rentalsAtlanta Villa rentalsChattanooga Cottage rentalsRome Apartment rentalsCancún Cottage rentalsBoston Monthly RentalsSydney Villa rentalsKissimmee Vacation rentalsLos Angeles Monthly RentalsSouth Lake Tahoe Cabin rentalsOrlando Vacation rentalsIndianapolis Apartment rentalsKailua-Kona Cabin rentalsHouston Monthly RentalsBangkok Villa rentalsLouisville Apartment rentalsKnoxville Condo rentalsMiami Apartment rentalsBreckenridge Monthly Rentals list","element_key":"list_dallas_vacation_rentalscleveland_co"},
+  searchbox_where:{"locators":[{"css":"internal:role=searchbox[name=\"Where\"i]","priority":1},{"css":"internal:role=searchbox[name=\"Where\"s]","priority":1}],"element_name":"Where searchbox","element_key":"searchbox_where"}
 };
 
 /**
@@ -95,3 +33,18 @@ Given(
   { timeout: 240000 },
   the_user_navigates_through_the_inspiration_for_future_getaways_section_and_clicks_on_various_vacation_rental_options
 );
+
+/**
+ * The user clicks on the Where searchbox on Airbnb homepage
+ * @recorder
+ * @path=/
+ */
+async function the_user_clicks_on_the_where_searchbox_on_airbnb_homepage (){
+// source: recorder
+// implemented_at: 2025-12-08T10:20:51.656Z
+  const _params = {  };
+  // Click on Where searchbox
+  await context.web.click(elements["searchbox_where"], _params, null, this);
+}
+
+Given("The user clicks on the Where searchbox on Airbnb homepage", { timeout: 60000}, the_user_clicks_on_the_where_searchbox_on_airbnb_homepage);
