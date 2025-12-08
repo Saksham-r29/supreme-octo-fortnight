@@ -44,5 +44,56 @@
       }
     ],
     "strategy": "basic"
+  },
+  "text_where": {
+    "custom": [],
+    "context": [],
+    "basic": [
+      {
+        "css": "internal:text=\"Where\"i >> xpath=..",
+        "score": 180,
+        "priority": 1
+      },
+      {
+        "css": "internal:text=\"Where\"s >> xpath=..",
+        "score": 185,
+        "priority": 1
+      },
+      {
+        "css": "internal:text=\"HomesHomesNEWNEWExperiencesExperiences, newNEWNEWServicesServices,\"i >> xpath=../.. >> div >> internal:has-text=\"Where\"i",
+        "score": 470.5,
+        "priority": 2,
+        "index": 3
+      },
+      {
+        "css": "internal:text=\"HomesHomesNEWNEWExperiencesExperiences, newNEWNEWServicesServices,\"i >> xpath=../.. >> div >> internal:has-text=/^Where$/",
+        "score": 488,
+        "priority": 2,
+        "index": 1
+      }
+    ],
+    "text_with_index": [
+      {
+        "css": "internal:text=\"HomesHomesNEWNEWExperiencesExperiences, newNEWNEWServicesServices,\"i >> xpath=../.. >> div >> internal:has-text=\"Where\"i",
+        "score": 470.5,
+        "priority": 2,
+        "index": 3
+      },
+      {
+        "css": "internal:text=\"HomesHomesNEWNEWExperiencesExperiences, newNEWNEWServicesServices,\"i >> xpath=../.. >> div >> internal:has-text=/^Where$/",
+        "score": 488,
+        "priority": 2,
+        "index": 1
+      }
+    ],
+    "ignore_digit": [],
+    "no_text": [
+      {
+        "css": "form > div.dir.dir-ltr:nth-child(1) > div > div.dir.dir-ltr:nth-child(2) > div.dir.dir-ltr:nth-child(2) > div.atm_kd_glywfm.atm_mj_glywfm_vmtskl.dir.dir-ltr:nth-child(1) > div.dir.dir-ltr",
+        "score": 500,
+        "priority": 3
+      }
+    ],
+    "strategy": "basic"
   }
 }
