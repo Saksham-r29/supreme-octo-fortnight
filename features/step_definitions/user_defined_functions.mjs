@@ -22,3 +22,15 @@ async function generate_crypto_id() {
 When("generate crypto id", { timeout: 120000 }, generate_crypto_id);
 
 
+
+/**
+/* generate a random uuid
+*/
+async function generate_a_random_uuid() {
+//source: user
+//implemented_at: 2025-12-08T10:24:17.705Z
+//TODO: Implement the step
+
+}
+
+Given("generate a random uuid", { timeout: 120000 }, generate_a_random_uuid);
