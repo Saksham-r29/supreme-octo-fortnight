@@ -5,10 +5,18 @@ import { closeContext, initContext, navigate, TestContext as context } from "aut
 /* generate crypto id
 */
 async function generate_crypto_id() {
-//source: user
-//implemented_at: 2025-12-08T09:49:41.223Z
-//TODO: Implement the step
-
+  //source: user
+  //implemented_at: 2025-12-08T09:49:41.223Z
+  // Generate a random crypto id (hex string, 32 chars)
+  const crypto = await import('crypto');
+  const id = crypto.randomBytes(16).toString('hex');
+  // Optionally, store or log the id for later use
+  console.log("Generated crypto id:", id);
+  // You can save it to test data if needed:
+  if (typeof setTestData === "function") {
+    setTestData({ crypto_id: id }, this);
+  }
 }
 
 When("generate crypto id", { timeout: 120000 }, generate_crypto_id);
+
