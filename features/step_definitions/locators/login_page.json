@@ -44,5 +44,82 @@
       }
     ],
     "strategy": "basic"
+  },
+  "textbox_username": {
+    "custom": [],
+    "context": [],
+    "basic": [
+      {
+        "css": "internal:role=textbox[name=\"Username\"i]",
+        "score": 102,
+        "priority": 1
+      },
+      {
+        "css": "internal:role=textbox[name=\"Username\"s]",
+        "score": 107,
+        "priority": 1
+      }
+    ],
+    "text_with_index": [],
+    "ignore_digit": [],
+    "no_text": [
+      {
+        "score": 500,
+        "css": "#username",
+        "priority": 1
+      },
+      {
+        "score": 146,
+        "css": "internal:label=\"Username *\"s",
+        "priority": 1
+      },
+      {
+        "score": 141,
+        "css": "internal:label=\"Username *\"i",
+        "priority": 1
+      },
+      {
+        "score": 520,
+        "css": "input[name=\"username\"]",
+        "priority": 1
+      },
+      {
+        "score": 520,
+        "css": "input[type=\"text\"]",
+        "priority": 1
+      }
+    ],
+    "strategy": "basic"
+  },
+  "text_username_password_login": {
+    "custom": [],
+    "context": [],
+    "basic": [
+      {
+        "css": "internal:text=\"Username *Password *Login\"i",
+        "score": 182,
+        "priority": 1
+      },
+      {
+        "css": "internal:text=\"Username *Password *Login\"s",
+        "score": 187,
+        "priority": 1
+      },
+      {
+        "css": "form >> internal:has-text=\"Username *Password *Login\"i",
+        "score": 356,
+        "priority": 1
+      }
+    ],
+    "text_with_index": [],
+    "ignore_digit": [],
+    "no_text": [
+      {
+        "score": 530,
+        "css": "form",
+        "priority": 1
+      }
+    ],
+    "strategy": "basic"
   }
 }
